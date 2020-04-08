@@ -7,5 +7,6 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - /data/www:/usr/share/nginx/html/
+      - /data/www/blog:/usr/share/nginx/html/blog
+      - /data/www/ssl:/usr/share/nginx/html/ssl
       - ./nginx.conf:/etc/nginx/nginx.conf
