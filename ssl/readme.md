@@ -6,15 +6,19 @@
  
  > [获取阿里云AccessKey](https://usercenter.console.aliyun.com/?spm=5176.12818093.nav-right.dak.488716d0qgnmuw#/manage/ak)
  
-```bash
-# 编辑docker-compose.yml填入阿里云获取的key
+  [docker & docker-compose install](https://github.com/hackshen/hdoc/blob/master/document/centos_env.md#install-docker)
 
-# 启动容器
-docker-compose.yml up -d
 
-# 生成证书 (生成证书放在当前目录ssl)
+ ```bash
+
+# 修改 docker-compose.yml 
+ - Ali_Key=xxxxxxx # 此处填获取的阿里云的AccessKey
+ - Ali_Secret=xxxxxxx # 此处填获取的阿里云的AccessKey
+
+# 生成证书 (生成证书放在当前ssl目录)
 docker exec acme.sh \
     --issue \
     --dns dns_ali \
     -d '*.hackshen.com' 
 ```
+
