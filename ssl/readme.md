@@ -11,9 +11,9 @@
 
  ```bash
 
-# 修改 docker-compose.yml 
- - Ali_Key=xxxxxxx # 此处填获取的阿里云的AccessKey
- - Ali_Secret=xxxxxxx # 此处填获取的阿里云的AccessKey
+# 修改 .env
+ Ali_Key=xxxxxxx # 此处填获取的阿里云的AccessKey
+ Ali_Secret=xxxxxxx # 此处填获取的阿里云的AccessKey
 
 # 生成证书 (生成证书放在当前ssl目录)
 docker exec acme.sh \

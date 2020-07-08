@@ -5,9 +5,8 @@ services:
     container_name: acme.sh
     restart: always
     command: daemon
-    environment:
-      - Ali_Key=xxxxx
-      - Ali_Secret=xxxxx
+    env_file:
+      - .env
     volumes:
       - ./ssl/:/acme.sh
     network_mode: host
