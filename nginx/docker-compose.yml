@@ -5,8 +5,8 @@ services:
     restart: always
     container_name: nginx
     ports:
-      - ${NG_HTTP:-80}:${NG_HTTP:-80}
-      - ${NG_HTTPS:-443}:${NG_HTTPS:-443}
+      - ${NG_HTTP:-80}:80
+      - ${NG_HTTPS:-443}:443
     volumes:
       - ${STATIC_PATH:-./www}/:/usr/share/nginx/html/
       - ./conf/${NG_ENV:-dev}.conf:/etc/nginx/conf.d/tmp.ng
