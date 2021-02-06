@@ -10,6 +10,7 @@ services:
     volumes:
       - ${STATIC_PATH:-./www}/:/usr/share/nginx/html/
       - ./conf/${NG_ENV:-dev}.conf:/etc/nginx/conf.d/tmp.ng
+      - ./ssl:/usr/share/nginx/html/ssl/
     environment:
       APP_PORT: ${APP_PORT:-3000}
       APP_NAME: ${APP_NAME:-app}
