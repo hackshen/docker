@@ -10,6 +10,8 @@ services:
       - ./conf:/verdaccio/conf
       - ./storage:/verdaccio/storage
       - ./plugins:/verdaccio/plugins
-
+volumes:
+  verdaccio:
+    driver: local
 
 
