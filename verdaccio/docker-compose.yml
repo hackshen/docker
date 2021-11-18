@@ -1,0 +1,13 @@
+version: '3'
+services:
+  verdaccio:
+    image: verdaccio
+    restart: always
+    container_name: verdaccio
+    ports:
+      - "4873:4873"
+    volumes:
+      - ./verdaccio:/verdaccio/
+
+
+
